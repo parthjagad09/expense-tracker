@@ -47,7 +47,7 @@ const AddExpenseForm = ({ onAddExpense }) => {
           className="add-btn add-btn-fill"
           onClick={() => onAddExpense(income)}
         >
-          Hello krishna
+          Add Expense
         </button>
       </div>
     </div>
