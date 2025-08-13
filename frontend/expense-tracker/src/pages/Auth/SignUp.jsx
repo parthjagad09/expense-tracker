@@ -89,7 +89,7 @@ function SignUp() {
               value={fullName}
               onChange={({ target }) => setFullName(target.value)}
               label="Full Name"
-              placeholder="Sudarshan"
+              placeholder="Parth Jagad"
               type="text"
             />
             <Input
