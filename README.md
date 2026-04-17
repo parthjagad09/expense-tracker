@@ -32,7 +32,7 @@ ExpenseTracker is a simple and efficient expense tracking application that helps
 git clone git@github.com:parthjagad09/expense-tracker.git
 ```
 
-### 2️⃣ Setup Frontend
+# Setup Frontend
 
 ```bash
 cd expense-tracker/frontend/expense-tracker
