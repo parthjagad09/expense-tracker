@@ -4,9 +4,9 @@ import EXPENSE_BANNER from "../../assets/images/expense_banner.jpg";
 import { LuTrendingUpDown } from "react-icons/lu";
 function AuthLayout({ children }) {
   return (
-    <div className="flex">
-      <div className="w-screen h-screen md:w-[60vm] px-12 pt-8 pb-12">
-        <h2 className="text-lg font-medium text-black">Expense Tracker</h2>
+    <div className="flex bg-rose-50">
+      <div className="w-screen h-screen md:w-[60vm] px-12 pt-8 pb-12 bg-rose-50">
+        <h2 className="text-lg font-medium text-black md:text-2xl mb-5 hidden md:block">Expense Tracker</h2>
         {children}
       </div>
 

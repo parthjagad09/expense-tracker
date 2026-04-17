@@ -75,7 +75,7 @@ function SignUp() {
 
   return (
     <AuthLayout>
-      <div className="lg:w-[100%] h-auto md:h-full mt-10 md:mt-0 flex flex-col justify-center ">
+      {/* <div className="lg:w-[100%] h-auto md:h-full mt-10 md:mt-0 flex flex-col justify-center ">
         <h3 className="text-xl font-semibold text-black">Create an account</h3>
         <p className="text-xs text-slate-700 mt-[5px] mb-6">
           Join us today by entering your details below
@@ -121,7 +121,74 @@ function SignUp() {
             </Link>
           </p>
         </form>
+      </div> */}
+      <div className="w-full h-auto md:h-full mt-6 md:mt-0 flex flex-col justify-center px-4 sm:px-6 lg:px-0">
+  
+  <h3 className="text-xl font-semibold text-black text-center md:text-left">
+    Create an account
+  </h3>
+
+  <p className="text-xs text-slate-700 mt-1 mb-6 text-center md:text-left">
+    Join us today by entering your details below
+  </p>
+
+  <form onSubmit={handleSignUp}>
+    
+    {/* Profile Center on Mobile */}
+    <div className="flex justify-center md:justify-start mb-4">
+      <ProfilePhotoSelector image={profilePic} setImage={setProfilePic} />
+    </div>
+
+    {/* Responsive Grid */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      
+      <Input
+        value={fullName}
+        onChange={({ target }) => setFullName(target.value)}
+        label="Full Name"
+        placeholder="Parth Jagad"
+        type="text"
+      />
+
+      <Input
+        value={email}
+        onChange={({ target }) => setEmail(target.value)}
+        label="Email Address"
+        placeholder="email@example.com"
+        type="text"
+      />
+
+      <div className="md:col-span-2">
+        <Input
+          value={password}
+          onChange={({ target }) => setPassword(target.value)}
+          label="Password"
+          placeholder="Min 8 Characters"
+          type="password"
+        />
       </div>
+    </div>
+
+    {error && (
+      <p className="text-red-500 text-xs pb-2.5 text-center md:text-left">
+        {error}
+      </p>
+    )}
+
+    {/* Full Width Button */}
+    <button className="btn-primary w-full" type="submit">
+      SIGN UP
+    </button>
+
+    <p className="text-[13px] text-slate-800 mt-3 text-center md:text-left">
+      Already have an account?{" "}
+      <Link className="font-medium text-primary underline" to="/login">
+        Login
+      </Link>
+    </p>
+
+  </form>
+</div>
     </AuthLayout>
   );
 }
