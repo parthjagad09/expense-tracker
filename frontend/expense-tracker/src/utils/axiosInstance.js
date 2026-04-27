@@ -1,6 +1,6 @@
 import axios from "axios";
-import { BASE_URL } from "./apiPaths";
-
+// import { BASE_URL } from "./apiPaths";
+const BASE_URL = import.meta.env.VITE_API_URL;
 const axiosInstence = axios.create({
   baseURL: BASE_URL,
   timeout: 10000,
